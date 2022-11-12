@@ -1,0 +1,9 @@
+[GIN-debug] GET    /test                     --> main.main.func1 (4 handlers)
+[GIN-debug] GET    /video/all                --> main.main.func2 (4 handlers)
+[GIN-debug] POST   /video                    --> main.main.func3 (4 handlers)
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Listening and serving HTTP on :8080
+::1 - [13 Nov 22 05:00 IST] GET /video/all 401 0s 
+::1 - [13 Nov 22 05:00 IST] POST /video 401 0s 
+::1 - [13 Nov 22 05:00 IST] POST /video 200 0s 
