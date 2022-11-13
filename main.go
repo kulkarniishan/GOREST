@@ -5,6 +5,7 @@ import (
 	"GOREST/middleware"
 	"GOREST/service"
 	"io"
+	"net/http"
 	"os"
 
 	"github.com/gin-gonic/gin"
@@ -41,7 +42,12 @@ func main() {
 	})
 
 	server.POST("/video", func(ctx *gin.Context) {
-		ctx.JSON(200, videoController.Save(ctx))
+		err := videoController.Save(ctx)
+		if err != nil {
+			 ctx.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+		} else {
+			ctx.JSON(http.StatusOK, gin.H{"message": "Video input is valid!"})
+		}
 	})
 
 	server.Run(":8080")
