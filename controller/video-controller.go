@@ -4,6 +4,7 @@ import (
 	"GOREST/entity"
 	"GOREST/service"
 	"GOREST/validators"
+	"net/http"
 
 	"github.com/gin-gonic/gin"
 	"github.com/go-playground/validator/v10"
@@ -12,6 +13,7 @@ import (
 type VideoController interface {
 	Save(ctx *gin.Context) error
 	FindAll() []entity.Video
+	ShowAll(ctx *gin.Context) 
 }
 
 type videoController struct {
@@ -32,6 +34,7 @@ func (controller *videoController) FindAll() []entity.Video {
 	return controller.service.FindAll()
 }
 
+
 func (controller *videoController) Save(ctx *gin.Context) error {
 	var video entity.Video
 	err := ctx.ShouldBindJSON(&video)
@@ -47,4 +50,19 @@ func (controller *videoController) Save(ctx *gin.Context) error {
 	
 	controller.service.Save(video)
 	return nil
+}
+
+
+//Views
+
+func (controller *videoController) ShowAll(ctx *gin.Context) {
+	videos := controller.FindAll()
+	data := gin.H{
+		"title":"Video Page",
+		"videos": videos,
+	}
+
+	ctx.HTML(http.StatusOK,"index.html",data)
+
+
 }

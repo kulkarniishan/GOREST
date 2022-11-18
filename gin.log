@@ -1,6 +1,43 @@
-[GIN-debug] GET    /test                     --> main.main.func1 (4 handlers)
-[GIN-debug] GET    /video/all                --> main.main.func2 (4 handlers)
-[GIN-debug] POST   /video                    --> main.main.func3 (4 handlers)
+[GIN-debug] GET    /api/test                 --> main.main.func1 (4 handlers)
+[GIN-debug] GET    /api/video/all            --> main.main.func2 (4 handlers)
+[GIN-debug] POST   /api/video                --> main.main.func3 (4 handlers)
+[GIN-debug] GET    /view/videos              --> GOREST/controller.VideoController.ShowAll-fm (4 handlers)
 [GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
 Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
 [GIN-debug] Listening and serving HTTP on :8080
+::1 - [19 Nov 22 03:56 IST] GET / 401 857.9µs 
+::1 - [19 Nov 22 03:56 IST] GET / 404 0s 
+::1 - [19 Nov 22 03:56 IST] GET /favicon.ico 404 0s 
+::1 - [19 Nov 22 03:56 IST] GET / 404 0s 
+::1 - [19 Nov 22 03:56 IST] GET / 404 0s 
+::1 - [19 Nov 22 03:57 IST] GET / 404 0s 
+::1 - [19 Nov 22 03:57 IST] GET /view/videos 200 2.5924ms 
+::1 - [19 Nov 22 03:57 IST] GET /view/videos 200 3.2777ms 
+::1 - [19 Nov 22 03:58 IST] GET /view/videos 200 6.2498ms 
+::1 - [19 Nov 22 03:58 IST] GET /view/videos 200 2.1258ms 
+::1 - [19 Nov 22 03:58 IST] GET /view/videos 200 2.0915ms 
+::1 - [19 Nov 22 03:58 IST] GET /view/videos 200 2.8765ms 
+::1 - [19 Nov 22 03:59 IST] GET /view/videos 200 1.5792ms 
+::1 - [19 Nov 22 03:59 IST] GET /view/videos 200 11.4241ms 
+::1 - [19 Nov 22 03:59 IST] GET /view/videos 200 1.8475ms 
+::1 - [19 Nov 22 03:59 IST] GET /view/videos 200 2.3522ms 
+::1 - [19 Nov 22 03:59 IST] GET /view/videos 200 1.6173ms 
+::1 - [19 Nov 22 03:59 IST] GET /view/videos 200 1.5229ms 
+::1 - [19 Nov 22 03:59 IST] GET /view/videos 200 2.5064ms 
+::1 - [19 Nov 22 03:59 IST] GET /view/videos 200 1.5247ms 
+::1 - [19 Nov 22 03:59 IST] GET /view/videos 200 2.5021ms 
+::1 - [19 Nov 22 03:59 IST] GET /view/videos 200 1.8519ms 
+::1 - [19 Nov 22 03:59 IST] GET /view/videos 200 1.403ms 
+::1 - [19 Nov 22 04:02 IST] POST /video 404 0s 
+::1 - [19 Nov 22 04:02 IST] POST /api/video 400 839.3µs 
+::1 - [19 Nov 22 04:02 IST] POST /api/video 400 0s 
+::1 - [19 Nov 22 04:03 IST] POST /api/video 400 0s 
+::1 - [19 Nov 22 04:03 IST] POST /api/video 400 0s 
+::1 - [19 Nov 22 04:03 IST] POST /api/video 400 279.7µs 
+::1 - [19 Nov 22 04:03 IST] POST /api/video 400 603.3µs 
+::1 - [19 Nov 22 04:04 IST] POST /api/video 200 0s 
+::1 - [19 Nov 22 04:04 IST] GET /view/videos 200 2.6041ms 
+::1 - [19 Nov 22 04:05 IST] POST /api/video 400 132.5µs 
+::1 - [19 Nov 22 04:06 IST] POST /api/video 200 714.9µs 
+::1 - [19 Nov 22 04:06 IST] GET /view/videos 200 3.2623ms 
+::1 - [19 Nov 22 04:14 IST] GET /view/videos 200 1.83ms 
